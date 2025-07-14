@@ -1,0 +1,479 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+}
+
+/* Header */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1877f2;
+    margin-right: 16px;
+}
+
+.search-bar {
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    width: 240px;
+    font-size: 14px;
+}
+
+.header-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-item {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nav-item:hover {
+    background-color: #f0f2f5;
+}
+
+.nav-item.active {
+    color: #1877f2;
+    border-bottom: 2px solid #1877f2;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 72px;
+    gap: 16px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 4px;
+}
+
+.sidebar-item:hover {
+    background-color: #e4e6ea;
+}
+
+.sidebar-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+/* Feed */
+.feed {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Post Composer */
+.post-composer {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.composer-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.composer-input {
+    flex: 1;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 24px;
+    padding: 12px 16px;
+    font-size: 16px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.composer-actions {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12px;
+    border-top: 1px solid #e4e6ea;
+}
+
+.composer-action {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #65676b;
+}
+
+.composer-action:hover {
+    background-color: #f0f2f5;
+}
+
+.composer-action-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.video-icon {
+    background-color: #f02849;
+    color: white;
+}
+
+.photo-icon {
+    background-color: #45bd62;
+    color: white;
+}
+
+.feeling-icon {
+    background-color: #f7b928;
+    color: white;
+}
+
+/* Post */
+.post {
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    padding-bottom: 8px;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.post-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.post-time {
+    font-size: 13px;
+    color: #65676b;
+}
+
+.post-content {
+    padding: 0 16px 16px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.post-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #65676b;
+    font-size: 14px;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    color: #65676b;
+    font-size: 14px;
+    border-bottom: 1px solid #e4e6ea;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 16px;
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: #65676b;
+    font-weight: 600;
+}
+
+.post-action:hover {
+    background-color: #f0f2f5;
+}
+
+.post-action.liked {
+    color: #1877f2;
+}
+
+.post-action-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.like-icon {
+    background-color: #1877f2;
+    color: white;
+}
+
+.comment-icon {
+    background-color: #65676b;
+    color: white;
+}
+
+.share-icon {
+    background-color: #42b883;
+    color: white;
+}
+
+.comments-section {
+    padding: 16px;
+    border-top: 1px solid #e4e6ea;
+    background-color: #f7f8fa;
+}
+
+.comment {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.comment-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.comment-content {
+    background-color: #e4e6ea;
+    border-radius: 16px;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.comment-input {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.comment-input input {
+    flex: 1;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 280px;
+    position: sticky;
+    top: 72px;
+    height: calc(100vh - 72px);
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.widget {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #65676b;
+}
+
+.friend-request {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.friend-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.friend-info {
+    flex: 1;
+}
+
+.friend-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.friend-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn {
+    padding: 6px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #1877f2;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #e4e6ea;
+    color: #1c1e21;
+}
+
+@media (max-width: 768px) {
+
+    .sidebar,
+    .right-sidebar {
+        display: none;
+    }
+
+    .main-container {
+        padding: 72px 8px 0;
+    }
+
+    .feed {
+        max-width: 100%;
+    }
+}
