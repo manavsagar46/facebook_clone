@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <div class="logo">facebook</div>
+            <input type="text" class="search-bar" placeholder="Search Facebook">
+        </div>
+        <div class="header-center">
+            <div class="nav-item active">🏠</div>
+            <div class="nav-item">📺</div>
+            <div class="nav-item">👥</div>
+            <div class="nav-item">🎮</div>
+        </div>
+        <div class="header-right">
+            <div class="profile-pic">JD</div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <div class="sidebar-icon">JD</div>
+                <span>John Doe</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">👥</div>
+                <span>Friends</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">📝</div>
+                <span>Memories</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">💾</div>
+                <span>Saved</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">👥</div>
+                <span>Groups</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">📺</div>
+                <span>Video</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">🛍️</div>
+                <span>Marketplace</span>
+            </div>
+            <div class="sidebar-item">
+                <div class="sidebar-icon">📰</div>
+                <span>Feeds</span>
+            </div>
+        </div>
+
+        <div class="feed">
+            <div class="post-composer">
+                <div class="composer-top">
+                    <div class="profile-pic">JD</div>
+                    <input type="text" class="composer-input" placeholder="What's on your mind, John?">
+                </div>
+                <div class="composer-actions">
+                    <div class="composer-action">
+                        <div class="composer-action-icon video-icon">📹</div>
+                        <span>Live Video</span>
+                    </div>
+                    <div class="composer-action">
+                        <div class="composer-action-icon photo-icon">📷</div>
+                        <span>Photo/Video</span>
+                    </div>
+                    <div class="composer-action">
+                        <div class="composer-action-icon feeling-icon">😊</div>
+                        <span>Feeling/Activity</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-avatar">AS</div>
+                    <div class="post-info">
+                        <h3>Alice Smith</h3>
+                        <div class="post-time">2 hours ago</div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    Just finished an amazing hike in the mountains! The view was absolutely breathtaking. Nature never fails to amaze me. 🏔️✨
+                </div>
+                <div class="post-image">📸 Beautiful mountain landscape</div>
+                <div class="post-stats">
+                    <span>👍 42 likes</span>
+                    <span>💬 8 comments</span>
+                </div>
+                <div class="post-actions">
+                    <div class="post-action like-btn" data-post="1">
+                        <div class="post-action-icon like-icon">👍</div>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-action comment-btn" data-post="1">
+                        <div class="post-action-icon comment-icon">💬</div>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-action">
+                        <div class="post-action-icon share-icon">↗️</div>
+                        <span>Share</span>
+                    </div>
+                </div>
+                <div class="comments-section" id="comments-1" style="display: none;">
+                    <div class="comment">
+                        <div class="comment-avatar">MB</div>
+                        <div class="comment-content">
+                            <div class="comment-author">Mike Brown</div>
+                            Wow, that looks incredible! Which trail did you take?
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="comment-avatar">SJ</div>
+                        <div class="comment-content">
+                            <div class="comment-author">Sarah Johnson</div>
+                            Beautiful shot! 📸 The lighting is perfect.
+                        </div>
+                    </div>
+                    <div class="comment-input">
+                        <div class="comment-avatar">JD</div>
+                        <input type="text" placeholder="Write a comment..." onkeypress="handleComment(event, 1)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-avatar">TC</div>
+                    <div class="post-info">
+                        <h3>Tech Company</h3>
+                        <div class="post-time">5 hours ago</div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    🚀 Exciting news! We're launching our new product next week. Stay tuned for the big reveal! 
+                    
+                    #TechLaunch #Innovation #ComingSoon
+                </div>
+                <div class="post-stats">
+                    <span>👍 156 likes</span>
+                    <span>💬 23 comments</span>
+                </div>
+                <div class="post-actions">
+                    <div class="post-action like-btn" data-post="2">
+                        <div class="post-action-icon like-icon">👍</div>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-action comment-btn" data-post="2">
+                        <div class="post-action-icon comment-icon">💬</div>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-action">
+                        <div class="post-action-icon share-icon">↗️</div>
+                        <span>Share</span>
+                    </div>
+                </div>
+                <div class="comments-section" id="comments-2" style="display: none;">
+                    <div class="comment">
+                        <div class="comment-avatar">RD</div>
+                        <div class="comment-content">
+                            <div class="comment-author">Rachel Davis</div>
+                            Can't wait to see what you've been working on! 🎉
+                        </div>
+                    </div>
+                    <div class="comment-input">
+                        <div class="comment-avatar">JD</div>
+                        <input type="text" placeholder="Write a comment..." onkeypress="handleComment(event, 2)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-avatar">DJ</div>
+                    <div class="post-info">
+                        <h3>David Johnson</h3>
+                        <div class="post-time">8 hours ago</div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    Spent the weekend learning React! Building my first component and loving every minute of it. 💻 
+                    
+                    Any tips for a beginner?
+                </div>
+                <div class="post-stats">
+                    <span>👍 28 likes</span>
+                    <span>💬 15 comments</span>
+                </div>
+                <div class="post-actions">
+                    <div class="post-action like-btn" data-post="3">
+                        <div class="post-action-icon like-icon">👍</div>
+                        <span>Like</span>
+                    </div>
+                    <div class="post-action comment-btn" data-post="3">
+                        <div class="post-action-icon comment-icon">💬</div>
+                        <span>Comment</span>
+                    </div>
+                    <div class="post-action">
+                        <div class="post-action-icon share-icon">↗️</div>
+                        <span>Share</span>
+                    </div>
+                </div>
+                <div class="comments-section" id="comments-3" style="display: none;">
+                    <div class="comment">
+                        <div class="comment-avatar">LW</div>
+                        <div class="comment-content">
+                            <div class="comment-author">Lisa Wilson</div>
+                            Start with functional components and hooks! They're easier to understand.
+                        </div>
+                    </div>
+                    <div class="comment-input">
+                        <div class="comment-avatar">JD</div>
+                        <input type="text" placeholder="Write a comment..." onkeypress="handleComment(event, 3)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <div class="widget">
+                <div class="widget-title">Friend Requests</div>
+                <div class="friend-request">
+                    <div class="friend-avatar">EM</div>
+                    <div class="friend-info">
+                        <div class="friend-name">Emma Martinez</div>
+                        <div class="friend-actions">
+                            <button class="btn btn-primary">Confirm</button>
+                            <button class="btn btn-secondary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="friend-request">
+                    <div class="friend-avatar">RT</div>
+                    <div class="friend-info">
+                        <div class="friend-name">Robert Taylor</div>
+                        <div class="friend-actions">
+                            <button class="btn btn-primary">Confirm</button>
+                            <button class="btn btn-secondary">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="widget-title">Contacts</div>
+                <div class="sidebar-item">
+                    <div class="sidebar-icon">AS</div>
+                    <span>Alice Smith</span>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-icon">MB</div>
+                    <span>Mike Brown</span>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-icon">SJ</div>
+                    <span>Sarah Johnson</span>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-icon">RD</div>
+                    <span>Rachel Davis</span>
+                </div>
+                <div class="sidebar-item">
+                    <div class="sidebar-icon">DJ</div>
+                    <span>David Johnson</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
